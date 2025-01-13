@@ -1,11 +1,18 @@
 let homeScoreTextAreaEl = document.getElementById("homeScoreTextArea")
 let awayScoreTextAreaEl = document.getElementById("awayScoreTextArea")
+document.getElementById("homePlusButton").addEventListener("click", () => addFoul(home))
+document.getElementById("awayPlusButton").addEventListener("click", () => addFoul(away))
+document.getElementById("homeMinusButton").addEventListener("click", () => removeFoul(home))
+document.getElementById("awayMinusButton").addEventListener("click", () => removeFoul(away))
 let timeEl = document.getElementById('timer')
 
 
 let homeScore = 0;
 let awayScore = 0;
+let homeFoulCount = 0
+let awayFoulCount = 0
 let home = "home"
+let away = "away"
 
 function addOnePoint(homeOrAway) {
     console.log(homeOrAway)
@@ -43,6 +50,26 @@ function updateScore(score, team) {
         homeScoreTextAreaEl.textContent = score;
     } else {
         awayScoreTextAreaEl.textContent = score;
+    }
+}
+
+function addFoul(team) {
+    if (team === home) {
+        homeFoulCount += 1
+        document.getElementById("homeFouls").textContent = homeFoulCount
+    } else {
+        awayFoulCount += 1
+        document.getElementById("awayFouls").textContent = awayFoulCount
+    }
+}
+
+function removeFoul(team) {
+    if (team === home) {
+        homeFoulCount -= 1
+        document.getElementById("homeFouls").textContent = homeFoulCount
+    } else {
+        awayFoulCount -= 1
+        document.getElementById("awayFouls").textContent = awayFoulCount
     }
 }
 

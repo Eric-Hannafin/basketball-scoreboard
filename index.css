@@ -36,6 +36,7 @@ textarea {
 #buttonDiv {
   text-align: center;
   height: 10vh;
+  margin-bottom: 5vh;
 }
 
 button {
@@ -60,4 +61,51 @@ h3 {
   height: 20vh;
   width: 25vw;
   color: yellow;
+}
+
+h4 {
+  margin-top: 5vh;
+}
+
+#homeFouls {
+  color: green;
+  height: 15vh;
+  width: 10vw;
+  margin-top: 2vh;
+}
+
+#awayFouls {
+  color: green;
+  height: 15vh;
+  width: 10vw;
+  margin-top: 2vh;
+}
+
+#foulDiv {
+  text-align: center;
+  height: 10vh;
+}
+
+#plusMinusFoul {
+  text-align: center;
+}
+
+#homePlusButton {
+  height: 6vh;
+  width: 6vh;
+}
+
+#homeMinusButton {
+  height: 6vh;
+  width: 6vh;
+}
+
+#awayPlusButton {
+  height: 6vh;
+  width: 6vh;
+}
+
+#awayMinusButton {
+  height: 6vh;
+  width: 6vh;
 }
